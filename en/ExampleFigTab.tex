@@ -19,14 +19,14 @@
 \begin{document}
 \section{Preliminaries}
 \large
-First, download the figures from the web by right clicking and selecting "Save Link As".
+First, download the figures from the web by right clicking and selecting "Save Link As...".
 \bigskip
-\begin{itemize}
-\item \url{https://raw.github.com/rjp0i/latex-intro/master/en/gerbil.jpg}
 
-\item \url{https://raw.github.com/rjp0i/latex-intro/master/en/lithium.png}
+\url{https://raw.github.com/rjp0i/latex-intro/master/en/gerbil.jpg}
 
-\end{itemize}
+\url{https://raw.github.com/rjp0i/latex-intro/master/en/lithium.png}
+
+
 
 
 \medskip
@@ -40,7 +40,7 @@ Then upload the images into this Overleaf Project. You will then need to recompi
 The PDF for this entire workshop can be found here:
 
 
-\item \url{https://raw.github.com/rjp0i/latex-intro/master/en/latex-fig-tab.pdf}
+ \url{https://raw.github.com/rjp0i/latex-intro/master/en/latex-fig-tab.pdf}
 
 
 
@@ -65,7 +65,7 @@ Here is a figure, with a caption
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{lithium.png} %scales the figure down to 50% of the original size
-\caption{This is Lithium (${}^{6}$Li)}
+\caption{\label{fig:lithium}This is Lithium (${}^{6}$Li)}
 \end{figure}
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -77,7 +77,7 @@ Figure \ref{fig:gerbil} shows the automatic numbering of figures (both in the ca
 \centering
 \includegraphics[
   width=0.5\textwidth]{gerbil}
-\caption{\label{fig:gerbil}Aww\ldots.}
+\caption{\label{fig:gerbil}Aww\ldots}
 \end{figure}
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -87,7 +87,7 @@ Figure \ref{fig:gerbil2}, shown below, shows how one can position a figure on a 
 {\bf Your Turn: Try changing the placement of the figure, using the options h, t, b, p, !, and H}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.5\textwidth]{gerbil}
+\includegraphics[width=0.70\textwidth]{gerbil}
 \caption{\label{fig:gerbil2}Aww\ldots.}
 \end{figure}
 \clearpage
@@ -98,11 +98,12 @@ Figure \ref{fig:gerbil2}, shown below, shows how one can position a figure on a 
 A very basic table
 \bigskip
 
-\begin{tabular}{lrr}
-Item   & Qty & Unit \$ \\
+\begin{tabular}{lrr}\hline\hline
+Item   & Qty & Unit \$ \\ \hline
 Widget & 1   & 199.99  \\
 Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\
+Cable  &3    &  19.99   \\
+\hline
 \end{tabular}
 \bigskip
 
@@ -147,15 +148,15 @@ Try adding horizontal and vertical lines to the table.
   
 {\bf Your turn:} 
 \begin{enumerate}
-\item What happens if you change Gnat to %${\backslash}$multirow\{2\}\{*\}\{Gnat\}?
+\item What happens if you change Gnat to ${\backslash}$multirow\{2\}\{*\}\{Gnat\}?
  % \multirow{2}{*}{Gnat}
-\item What happens if you replace the cline 1-2 command with an hline command?  
+\item What happens if you replace the ${\backslash}$cline\{1-2\} command with an ${\backslash}$hline command?  
 \end{enumerate}
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- \section{Positioning, Captioning, and Labeling a Table}
+\section{Positioning, Captioning, and Labeling a Table}
 
-\begin{table}[b]
+\begin{table}[H]
 \centering
 \begin{tabular}{|l|l|r|} \hline
   \multicolumn{2}{|c|}{Item} & \multirow{2}{*}{Price (\$)}\\ \cline{1-2}
@@ -168,12 +169,12 @@ Try adding horizontal and vertical lines to the table.
  \end{tabular}
  \caption{\label{tab:prices}Wholesale Prices}
  \end{table}
-  
+ %\input{prices.tex} 
  \bigskip
   
 {\bf Your turn:} 
 \begin{enumerate}
-\item Refer to the table in the text
+\item Refer to the Table \ref{tab:prices} in the text
 \item Move the location of the table with the positioning parameter
 \end{enumerate}
 \clearpage
