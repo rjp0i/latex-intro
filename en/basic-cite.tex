@@ -1,0 +1,52 @@
+\documentclass[12pt]{report}
+\usepackage[hyphens]{url}
+\urlstyle{rm}
+
+\begin{document}
+
+Thank you for coming to the Bib Your \TeX \space workshop. This document demonstrates the features of the basic \textbackslash cite command in \LaTeX. From here, we will move on to Bib\TeX, natbib, biblatex, and biber. 
+
+\paragraph{More Information \& Support}
+Please visit our LibGuide on citing in La\TeX, available at:
+\\ \textbf{http://guides.library.yale.edu/bibtex}
+\\ OR
+see the StatLab's information about \LaTeX, Mik\TeX, and WinEdt:
+\\ \textbf{http://statlab.stat.yale.edu/help/doco/Miktek.jsp}
+
+(You can also just use \TeX works, which comes bundled with MiK\TeX, but your editor choice is really up to you.)
+
+\paragraph{Citation Management}
+
+The \textbackslash cite command is not usually ideal for citing in \LaTeX, though. It may seem easier to compile lists of citations every time you write a paper in Word or \LaTeX, but it really isn't---think about the amount of time you will spend formatting your citations, examining different style guides, and wrestling information into a format acceptable to a discipline or journal---and it's important to cite properly, especially when writing for publication. According to \cite{Mundava2007}, ``authors have the right to own the phrases or ideas written exclusively by the author'' (p. 171).
+
+\paragraph{Your Research Workflow}
+
+Managing your citations with software can take the guesswork out of creating the in-text and bibliographic citations for your paper. Some fields prefer that you use \LaTeX, as the document rendering is cleaner for formulae and the typesetting looks professional. You can manage your citations in a .bib database and refer to it in your papers. 
+
+There are other methods, though: Citation management software has risen in popularity due to their ease of use for faculty and students \cite{Hensley2011}. The software has varying degrees of support for exporting to a .bib database. One drawback of managing a .bib database is that you have to back it up if all of your citations are there---one computer crash and your information could be gone---but many of these GUI-based citation management tools have cloud backup.
+
+If you want to work purely in \LaTeX{}, consider having your master .bib files on your Yale drive, Dropbox, Box, or SpiderOak. Yale will do backups for you if something happens. If you can't access the VPN, choose Box, Dropbox, or SpiderOak.
+
+\paragraph{Examples}
+
+So, with that said, let's run through some examples.
+
+I imported my .bib database from Mendeley, which contains URLs for the files. You may want to call the url package by Donald Arseneau, which will put in line breaks and make the bibliography look much cleaner. Depending on how you structure your citation workflow (i.e., using .bib exports from a citation manager or generating your .bib file manually), this may be important to you.
+
+If you want to read more about citation management as part of researchers' workflows, I recommend reading ``Managing Information: Evaluating and Selecting Citation Management Software'' \cite{Butros2011}. If you want to learn more about citation management, consider Mindy McAdams' ``Managing Research: Your Personal Library, Online'' \cite{McAdams2012}. Some researchers are also working on linking .bib databases to other tools to ease citation library management \cite{Todoroki2010}, \cite{Curry2008}. Many researchers I interact with as a liaison indicate that they use .bib files alone or just the basic \textbackslash cite command, but these tools could prove useful in the future.
+
+\begin{thebibliography}{9}
+\bibitem{Mundava2007} Mundava, M., \& Chaudhuri, J. (2007). Understanding plagiarism: The role of librarians at the University of Tennessee in assisting students to practice fair use of information. \textit{College \& Research Libraries News, 68}(3), 170-173.
+\bibitem{Hensley2011} Hensley, M.K. (2011). Citation management software features and futures. \textit{Reference User Services Quarterly, 50}(3), 204-208.
+\bibitem{Butros2011} Butros, A., \& Taylor, S. (2011). Managing information: evaluating and selecting citation management software, a look at EndNote, RefWorks, Mendeley, and Zotero. \textit{Nature, 54}(2), 53-66.
+\bibitem{McAdams2012} McAdams, M. (2012). Managing research: Your personal library, online. \textit{Teaching Online Journalism}. Retrieved on 15 August 2012 from http://mindymcadams.com/tojou/2012/managing-research-your-personal-library-online/
+\bibitem{Todoroki2010} Todoroki, S.-i., \& Konishi, T. (2010). Bib\TeX -based manuscript writing support system for researchers. \textit{Asian Journal of \TeX , 4}(2).
+\bibitem{Curry2008} Curry, M. (2008). BibPort: Creating bibliographic references. \textit{Dr Dobbs Journal, 33}(2).
+
+\end{thebibliography}
+
+\end{document}
+
+
+
+
